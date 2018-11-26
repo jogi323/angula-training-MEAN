@@ -1,0 +1,36 @@
+<div class="container bg-secondary">
+<div class="row justify-content-center align-items-center" id="login">
+    <form>
+      <h1 class="text-primary h1">Login Page</h1>
+      <div class="form-group">
+        <label class="label font-weight-bold">Username</label>
+        <input type="text" placeholder="Enter email" class="form-control" name="Email" [(ngModel)]="LoginDetails.Email" autofocus required #Email="ngModel">
+        <div *ngIf="Email.invalid && (Email.dirty || Email.touched)">
+          <div *ngIf="Email.errors.required">Email is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="font-weight-bold">Password</label>
+        <input type="password" placeholder="" class="form-control">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label checkbox"><input type="checkbox" class="form-check-input"/> Remember me </label><span class="float-right font-weight-bold"><a routerLink="/registration">Register</a></span>
+      </div>
+      <button class="btn btn-primary">Login</button>
+      <br/>
+      <br/>
+    </form>
+    </div>
+  </div>
+
+  
+
+  
+
+
+  
+    
+
+
+
+
