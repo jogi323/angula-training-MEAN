@@ -7,39 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  public QuotesDetails =[{Authorname:"", Quote:""}];
-    
-   
-  public QuoteList=[];
-  
+  public QuotesDetails: Object;
 
-  constructor() { 
+
+  public QuoteList = [];
+
+
+  constructor() {
+    this.QuotesDetails = {
+      author: '',
+      quote: ''
+    };
     console.log(this.QuoteList);
-  
- }
-  addQuotes(QuotesDetails)
-  {
-    this.QuoteList=[];
-    QuotesDetails.forEach(element=>{
-    if(this.QuotesDetails.length>0){
-      this.QuoteList.push(element);
-    } 
-  });
-  
+
   }
-/*
-  addQuote(QuoteDetails)
-  {
-    this.QuoteList=[];
-    QuoteDetails.forEach(quote=>{
-    if(QuoteDetails!==null)
-    {
-      this.QuoteList.push(QuoteDetails);  
+  addQuotes(QuotesDetails) {
+
+    if (QuotesDetails.quote && QuotesDetails.author) {
+      this.QuoteList.push(QuotesDetails);
     }
-  });
-    
+
   }
-*/
   ngOnInit() {
   }
 

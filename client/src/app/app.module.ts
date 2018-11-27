@@ -8,19 +8,23 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
     RegistrationComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

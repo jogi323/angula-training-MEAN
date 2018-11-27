@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body bg-info">
-  <span class="font-weight-bold">Author: </span><input type="text" id="input" size="30"placeholder="Author name....." name="author" [(ngModel)]="QuotesDetails.Authorname" /><br/><br/>
-  <span class="font-weight-bold">Quote: </span><textarea row="4" cols="35" id="text" placeholder="Please enter your quote......." [(ngModel)]="QuotesDetails.Quote"></textarea><br/><br/>
+  <span class="font-weight-bold">Author: </span><input type="text" id="input" size="30"placeholder="Author name....." name="author" [(ngModel)]="QuotesDetails.author" /><br/><br/>
+  <span class="font-weight-bold">Quote: </span><textarea row="4" cols="35" id="text" placeholder="Please enter your quote......." [(ngModel)]="QuotesDetails.quote"></textarea><br/><br/>
   <button (click)="addQuotes(QuotesDetails)">AddQuote</button> 
 </div>
 </div>
