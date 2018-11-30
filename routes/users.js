@@ -50,7 +50,7 @@ router.post('/addQuote', (req,res) => {
     author: req.body.author,
     quote: req.body.quote
   });
-  Quote.find({username: req.body.userName},(err, result) =>{
+  Quote.find({quote: req.body.quote},(err, result) =>{
     if (err) {
       res.send({status: 'failed', msg: err});
     } else if (!result.length) {
